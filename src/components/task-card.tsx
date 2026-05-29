@@ -5,7 +5,7 @@ function TaskCard({ task }: { task: Task }) {
     <>
       <h2>{task.title}</h2>
       <div>{task.description}</div>
-      <div>{task.isComplete}</div>
+      <div>{task.isComplete ? "✅ Done" : "❌ Not done"}</div>
     </>
   );
 }
