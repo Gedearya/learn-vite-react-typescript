@@ -1,13 +1,12 @@
-import TaskCard from "./components/task-card";
+import Header from "./components/header";
+import TaskList from "./components/task-list";
 import dataTask from "./data";
 
 const App = () => {
   return (
     <>
-      <div>Task Management</div>
-      {dataTask.map((task) => {
-        return <TaskCard key={task.id} task={task} />;
-      })}
+      <Header title="Task Management" />
+      <TaskList tasks={dataTask} />
     </>
   );
 };
