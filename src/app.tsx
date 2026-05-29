@@ -1,17 +1,13 @@
 import TaskCard from "./components/task-card";
+import dataTask from "./data";
 
 const App = () => {
   return (
     <>
       <div>Task Management</div>
-      <TaskCard
-        task={{
-          id: 1,
-          title: "Play Soccer",
-          description: "Stadion Gelora Bung Karno",
-          isComplete: false,
-        }}
-      />
+      {dataTask.map((task) => {
+        return <TaskCard key={task.id} task={task} />;
+      })}
     </>
   );
 };
